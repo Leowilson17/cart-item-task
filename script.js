@@ -1,4 +1,3 @@
-
 // Calculation Process
 var totalProduct;
 var totalPrice;
