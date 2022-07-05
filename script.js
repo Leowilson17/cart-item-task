@@ -15,18 +15,22 @@ function btn_click(product) {
     pro_name.setAttribute('class', 'order-item');
     var para_1 = document.createElement('p');
     para_1.setAttribute('id', 'pro-name');
-    para_1.innerHTML = product;
     var para_2 = document.createElement('p');
     para_2.setAttribute('id', 'qty-num');
-    para_2.innerHTML = 'Quantity ' + totalProduct;
     var para_3 = document.createElement('p');
     para_3.setAttribute('id', 'price-amt');
-    para_3.innerHTML = 'Price ' + totalPrice;
     erase = document.createElement('button');
     erase.setAttribute('id', 'remove-btn');
     erase.setAttribute('onclick', 'remove_btn()');
-    erase.innerHTML = 'remove';
-    //Using appendChild method
+    
+    // Using innerHTML  Method
+    para_1.innerHTML = product;
+    para_2.innerHTML = 'Quantity ' + totalProduct;
+     para_3.innerHTML = 'Price ' + totalPrice;
+     erase.innerHTML = 'remove';
+    
+    
+    // Using appendChild method
     var side = document.getElementById('side-container');
     pro_name.appendChild(para_1);
     pro_name.appendChild(para_2);
@@ -34,7 +38,7 @@ function btn_click(product) {
     pro_name.appendChild(erase);
     side.appendChild(pro_name);
 }
-// Remove button Function
+   // Remove button Function
 function remove_btn() {
     var orderId = document.querySelector('.order-item');
     orderId.remove();
