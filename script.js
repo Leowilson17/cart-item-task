@@ -1,4 +1,4 @@
-var erase;
+
 // Calculation Process
 var totalProduct;
 var totalPrice;
